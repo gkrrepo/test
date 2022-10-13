@@ -1,3 +1,10 @@
+provider "aws"{
+  assume_role {
+    role_arn = "arn:aws:iam::614982824857:role/Terraform_admin"
+    session_name = "Terraform_CICD"
+  }
+}
+
 resource "random_pet" "lambda_bucket_name" {
   prefix = "lambda"
   length = 2
