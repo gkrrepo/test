@@ -1,5 +1,5 @@
-resource "aws_security_group" "web-server" {
-        name = "web-server"
+resource "aws_security_group" "web-server-cp" {
+        name = "web-server-cp"
         description = "Allow incoming HTTP"
 
         ingress {
