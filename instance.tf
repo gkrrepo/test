@@ -18,7 +18,7 @@ resource "aws_instance" "web-server" {
         echo "<html><h1>Hello World</p></h1>
         EOF
     tags = {
-    Name = "web-server"
+    Name = "web-servesr"
     }
 }
 
