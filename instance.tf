@@ -1,6 +1,6 @@
 resource "aws_instance" "web-server" {
     ami                 = "ami-06489866022e12a14"
-    vpc_id              = "vpc-03cd299bd746c752f"
+    
     instance_type       = "t2.micro"
     count               = 1
     key_name            = "terraform"
