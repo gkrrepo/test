@@ -86,12 +86,12 @@ resource "aws_iam_policy" "cicd-build-policy" {
   policy      = data.aws_iam_policy_document.cicd-build-policies.json
 }
 
-resource "aws_iam_role_policy_attachment" "cicd-codebuild-attachment1" {
+resource "aws_iam_role_policy_attachment" "cicd-codebuild-attachment5" {
   policy_arn = aws_iam_policy.cicd-build-policy.arn
   role       = aws_iam_role.cicd-codebuild-role.id
 }
 
-resource "aws_iam_role_policy_attachment" "cicd-codebuild-attachment2" {
+resource "aws_iam_role_policy_attachment" "cicd-codebuild-attachment4" {
   policy_arn = "arn:aws:iam::aws:policy/PowerUserAccess"
   role       = aws_iam_role.cicd-codebuild-role.id
 }
