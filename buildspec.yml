@@ -9,12 +9,12 @@ phases:
       - "mv terraform /usr/local/bin/"
     pre_build:
       commands:
-        - terraform init
+        - "terraform init"
     
     build:
       commands:
-        - terraform $TF_COMMAND -auto-approve
+        - "terraform $TF_COMMAND -auto-approve"
 
     post_build:
       commands:
-        - echo terraform $TF_COMMAND completed on 'date'
+        - "echo terraform $TF_COMMAND completed on 'date'"
