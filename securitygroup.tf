@@ -1,4 +1,4 @@
-resource "aws_security_group" "web-serverss" {
+resource "aws_security_group" "web-server-op" {
         name = "web-serverss"
         description = "Allow incoming HTTP"
 
