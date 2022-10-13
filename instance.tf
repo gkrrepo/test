@@ -1,9 +1,20 @@
+terraform{
+    backend "s3" {
+        bucket = "tf-bucket-s3-v01"
+        encrypt = true
+        key = "terraform.tfstate"
+        region = "ap-south-1"
+    }
+}
+
+
+
 resource "aws_instance" "web-server" {
     ami                 = "ami-06489866022e12a14"
     instance_type       = "t2.micro"
     count               = 1
     key_name            = "terraform"
-    security_groups     = ["${aws_security_group.web-serverss.name}"]
+    security_groups     = ["${aws_security_group.web-server-op.name}"]
     user_data = <<-EOF
 
         #!/bin/bash
