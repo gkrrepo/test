@@ -1,5 +1,5 @@
 resource "aws_security_group" "web-server" {
-        vpc_id = "vpc-0fea6f98b744001f6"
+        vpc_id = "vpc-4f0d9132"
         name = "web-server"
         description = "Allow incoming HTTP"
 
