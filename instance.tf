@@ -1,6 +1,5 @@
 resource "aws_instance" "web-server" {
     ami                 = "ami-06489866022e12a14"
-    subnet_id           = "subnet-0c40bf030effcd2e5"
     instance_type       = "t2.micro"
     count               = 1
     key_name            = "terraform"
