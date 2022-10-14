@@ -4,7 +4,7 @@ resource "aws_instance" "web-server" {
     instance_type       = "t2.micro"
     count               = 1
     key_name            = "terraform"
-    security_groups     = ["${aws_security_group.web-server.name}"]
+    security_groups     = ["sg-0280840b0426ff6ef"]
     user_data = <<-EOF
 
         #!/bin/bash
