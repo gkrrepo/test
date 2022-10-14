@@ -7,18 +7,18 @@ terraform{
     }
 }
 
-resource "random_pet" "lambda_bucket_name" {
-  prefix = "lambda"
+resource "random_pet" "lambda_bucket_k_name" {
+  prefix = "lambda2"
   length = 2
 }
 
-resource "aws_s3_bucket" "lambda_bucket" {
-  bucket        = random_pet.lambda_bucket_name.id
+resource "aws_s3_bucket" "lambda_k_bucket" {
+  bucket        = random_pet.lambda_bucket_k_name.id
   force_destroy = true
 }
 
-resource "aws_s3_bucket_public_access_block" "lambda_bucket" {
-  bucket = aws_s3_bucket.lambda_bucket.id
+resource "aws_s3_bucket_public_access_block" "lambda_k_bucket" {
+  bucket = aws_s3_bucket.lambda_k_bucket.id
 
   block_public_acls       = true
   block_public_policy     = true
