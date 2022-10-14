@@ -4,7 +4,7 @@ provider "aws"{
 
 
 resource "aws_instance" "web-server" {
-    ami                 = "ami-0636eac5d73e0e5d7"
+    ami                 = "ami-08c40ec9ead489470"
     instance_type       = "t2.micro"
     subnet_id           = "subnet-0c40bf030effcd2e5"
     count               = 1
